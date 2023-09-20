@@ -6,7 +6,7 @@ export const api = getAPIClient();
 // Get SSR
 export function getAPIClient(ctx?: any) {
   const api = axios.create({
-    baseURL: 'https://app-project-alpha.vercel.app',
+    baseURL: process.env.AXIOS_BASE_URL,
   });
 
   // api.interceptors.request.use(config => {
