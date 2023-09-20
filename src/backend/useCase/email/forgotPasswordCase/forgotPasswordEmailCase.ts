@@ -48,7 +48,7 @@ class ForgotPasswordEmailCase {
                                         <p>Dear ${userExists.name},</p>
                                         <p>Click the button below to reset your password:</p>
                                         <p>
-                                            <a href="http://localhost:3000/forgotPassword/updatePassword/${userExists.id}" style="display: inline-block; background-color: #007bff; color: #ffffff; text-decoration: none; padding: 10px 20px; border-radius: 5px;">Reset Password</a>
+                                            <a href="${process.env.AXIOS_BASE_URL}/forgotPassword/updatePassword/${userExists.id}" style="display: inline-block; background-color: #007bff; color: #ffffff; text-decoration: none; padding: 10px 20px; border-radius: 5px;">Reset Password</a>
                                         </p>
                                         <p>If you didn't request a password reset, please ignore this email.</p>
                                     </td>

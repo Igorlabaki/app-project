@@ -41,7 +41,7 @@ class VerifyEmailCase {
                                 <p>Dear ${userExists.name},</p>
                                 <p>Thank you for signing up with NextAuth. To get started, please verify your email by clicking the button below:</p>
                                 <p>
-                                    <a href="http://localhost:3000/verifyEmail/${userExists.id}" style="display: inline-block; background-color: #007bff; color: #ffffff; text-decoration: none; padding: 10px 20px; border-radius: 5px;">Verify Email</a>
+                                    <a href="${process.env.AXIOS_BASE_URL}/verifyEmail/${userExists.id}" style="display: inline-block; background-color: #007bff; color: #ffffff; text-decoration: none; padding: 10px 20px; border-radius: 5px;">Verify Email</a>
                                 </p>
                                 <p>If you didn't register for NextAuth, you can safely ignore this email.</p>
                             </td>
