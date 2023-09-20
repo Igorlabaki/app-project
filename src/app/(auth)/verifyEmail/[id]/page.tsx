@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { IoIosArrowRoundBack } from 'react-icons/io';
 
 import { NextAuthLogoComponent } from '@/components/util/nextAuthLogo';
 import { api } from '@/services/axios';
@@ -30,7 +31,16 @@ export default async function VerifyEmail({ params }: VerifyEmailProps) {
         <h1 className="text-sm font-[600] text-center">
           Success, {user.name}: Your Email has been Verified!
         </h1>
-        <Link href={'/'}>home</Link>
+        <Link
+          href={'/'}
+          className="flex justify-center items-center gap-x-2"
+        >
+          {' '}
+          <IoIosArrowRoundBack
+            className={'absolute left-5 top-5 text-black text-[24px] cursor-pointer'}
+          />
+          <p>Go back to home page</p>
+        </Link>
       </div>
     </section>
   );
